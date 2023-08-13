@@ -7,6 +7,7 @@
               {env,[]},
               {modules,[conbee,hw_conbee,hw_conbee_app,hw_conbee_sup,
                         lib_conbee,lib_hw_conbee,tradfri_bulb_E27_cws_806lm,
-                        tradfri_control_outlet,zigbee_handler]},
+                        tradfri_control_outlet,tradfri_on_off_switch,
+                        zigbee_handler]},
               {licenses,["Apache-2.0"]},
               {links,[]}]}.
