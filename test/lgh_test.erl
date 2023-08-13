@@ -50,26 +50,35 @@ test_1()->
     true=rpc:call(?HwConbee,hw_conbee,get,["tradfri_motion_1",is_reachable,[]],5000),
     true=rpc:call(?HwConbee,hw_conbee,get,["lumi_motion_1",is_reachable,[]],5000),
     true=rpc:call(?HwConbee,hw_conbee,get,["lumi_magnet_1",is_reachable,[]],5000),
+    true=rpc:call(?HwConbee,hw_conbee,get,["lumi_motion_1",is_reachable,[]],5000),
+  %  true=rpc:call(?HwConbee,hw_conbee,get,["switch_1",is_reachable,[]],5000),
  
 
-
     %% lamp_1
-    
+    rpc:call(?HwConbee,hw_conbee,set,["lamp_1",turn_on,[]],5000),
+    true=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_on,[]],5000),
+    rpc:call(?HwConbee,hw_conbee,set,["lamp_1",turn_off,[]],5000),
+    false=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_on,[]],5000),
    
-    LampIsOn_1=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_on,[]],5000),
-    case  LampIsOn_1 of
-	true->
-	    rpc:call(?HwConbee,hw_conbee,set,["lamp_1",turn_off,[]],5000),
-	    false=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_on,[]],5000);
-	false->
-	    rpc:call(?HwConbee,hw_conbee,set,["lamp_1",turn_on,[]],5000),
-	    true=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_on,[]],5000)
-    end,
+    %% 
+    rpc:call(?HwConbee,hw_conbee,set,["outlet_1",turn_on,[]],5000),
+    true=rpc:call(?HwConbee,hw_conbee,get,["outlet_1",is_on,[]],5000),
+    timer:sleep(2000),
+    rpc:call(?HwConbee,hw_conbee,set,["outlet_1",turn_off,[]],5000),
+    false=rpc:call(?HwConbee,hw_conbee,get,["outlet_1",is_on,[]],5000),
 
-    %  tradfri_motion_1 tradfri_motion_sensor 
-     % true=rpc:call(?HwConbee,hw_conbee,get,["tradfri_motion_1",is_reachable,[]],5000),
-    
+    %%
+    Temp=rpc:call(?HwConbee,hw_conbee,get,["weather_1",temperature,[]],5000),
+    io:format("Temp ~p~n",[{Temp,?MODULE,?LINE}]),
+    Hum=rpc:call(?HwConbee,hw_conbee,get,["weather_1",humidity,[]],5000),
+    io:format("Hum ~p~n",[{Hum,?MODULE,?LINE}]),
+    Press=rpc:call(?HwConbee,hw_conbee,get,["weather_1",pressure,[]],5000),
+    io:format("Press ~p~n",[{Press,?MODULE,?LINE}]),
+
+
     ok.
+
+
 
 %% --------------------------------------------------------------------
 %% Function: available_hosts()
