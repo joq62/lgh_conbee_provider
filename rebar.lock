@@ -9,7 +9,7 @@
   1},
  {<<"etcd">>,
   {git,"https://github.com/joq62/etcd.git",
-       {ref,"17056f2f85ed7367ffc54f0db010675726379cb9"}},
+       {ref,"c0edae2dd2ac423feeda517519eea5d42d9a7ddc"}},
   0},
  {<<"gun">>,
   {git,"https://github.com/ninenines/gun",
