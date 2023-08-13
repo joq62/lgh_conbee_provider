@@ -8,7 +8,9 @@
               {modules,[conbee,hw_conbee,hw_conbee_app,hw_conbee_sup,
                         lib_conbee,lib_hw_conbee,lumi_sensor_magnet_aq2,
                         lumi_sensor_motion_aq2,lumi_sensor_weather,
-                        tradfri_bulb_E27_cws_806lm,tradfri_control_outlet,
-                        tradfri_on_off_switch,zigbee_handler]},
+                        tradfri_bulb_E14_ws_candleopal_470lm,
+                        tradfri_bulb_E27_cws_806lm,tradfri_bulb_e27_ww_806lm,
+                        tradfri_control_outlet,tradfri_motion_sensor,
+                        tradfri_on_off_switch]},
               {licenses,["Apache-2.0"]},
               {links,[]}]}.

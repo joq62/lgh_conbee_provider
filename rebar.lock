@@ -17,7 +17,7 @@
   1},
  {<<"hw_conbee">>,
   {git,"https://github.com/joq62/hw_conbee.git",
-       {ref,"a1a5208a3eadc61639c5342087f09c5694fb93c2"}},
+       {ref,"6a8f2bb8da1f9e78e7ee6088f3d4500f090a88e2"}},
   0},
  {<<"jsx">>,{pkg,<<"jsx">>,<<"3.1.0">>},1},
  {<<"lib_sd">>,
