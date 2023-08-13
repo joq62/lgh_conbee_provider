@@ -33,6 +33,11 @@ clean:
 	rm -rf ebin
 	rm -rf logs;
 	rm -rf rebar.lock
+lgh_test:
+	rm -rf test_ebin;
+	mkdir test_ebin;
+	erlc -o test_ebin test/*.erl;
+	erl -pa test_ebin -sname lgh_test -setcookie a -run lgh_test start
 
 eunit:
 #	Standard
