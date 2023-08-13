@@ -47,9 +47,10 @@ test_1()->
     true=rpc:call(?HwConbee,hw_conbee,get,["lamp_1",is_reachable,[]],5000),   
     true=rpc:call(?HwConbee,hw_conbee,get,["weather_1",is_reachable,[]],5000),
     true=rpc:call(?HwConbee,hw_conbee,get,["outlet_1",is_reachable,[]],5000),
-    true=rpc:call(?HwConbee,hw_conbee,get,["switch_1",is_reachable,[]],5000),
-    true=rpc:call(?HwConbee,hw_conbee,get,["lumi_magnet_1",is_reachable,[]],5000),
     true=rpc:call(?HwConbee,hw_conbee,get,["tradfri_motion_1",is_reachable,[]],5000),
+    true=rpc:call(?HwConbee,hw_conbee,get,["lumi_motion_1",is_reachable,[]],5000),
+    true=rpc:call(?HwConbee,hw_conbee,get,["lumi_magnet_1",is_reachable,[]],5000),
+ 
 
 
     %% lamp_1
